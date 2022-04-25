@@ -74,10 +74,10 @@ global proc shelf_Custom () {
     ;
     shelfButton
         -enableCommandRepeat 1
-        -flexibleWidthType 3
+        -flexibleWidthType 1
         -flexibleWidthValue 32
         -enable 1
-        -width 35
+        -width 34
         -height 34
         -manage 1
         -visible 1
@@ -96,8 +96,8 @@ global proc shelf_Custom () {
         -font "plainLabelFont" 
         -overlayLabelColor 0.8 0.8 0.8 
         -overlayLabelBackColor 0 0 0 0.5 
-        -image "object_NEX.png" 
-        -image1 "object_NEX.png" 
+        -image "cube.png" 
+        -image1 "cube.png" 
         -style "iconOnly" 
         -marginWidth 1
         -marginHeight 1
@@ -136,6 +136,40 @@ global proc shelf_Custom () {
         -marginWidth 1
         -marginHeight 1
         -command "DeleteAllHistory" 
+        -sourceType "mel" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -flexibleWidthType 3
+        -flexibleWidthValue 32
+        -enable 1
+        -width 35
+        -height 34
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "Toggle hard edges (color) visibility" 
+        -enableBackground 0
+        -backgroundColor 0 0 0 
+        -highlightColor 0.321569 0.521569 0.65098 
+        -align "center" 
+        -label "Hard Edges (color)" 
+        -labelOffset 0
+        -rotation 0
+        -flipX 0
+        -flipY 0
+        -useAlpha 1
+        -font "plainLabelFont" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0 0 0 0.5 
+        -image "edges_NEX.png" 
+        -image1 "edges_NEX.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "TogglePolyDisplayHardEdgesColor" 
         -sourceType "mel" 
         -commandRepeatable 1
         -flat 1

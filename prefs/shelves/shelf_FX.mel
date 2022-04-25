@@ -1,4 +1,4 @@
-global proc shelf_XGen () {
+global proc shelf_FX () {
     global string $gBuffStr;
     global string $gBuffStr0;
     global string $gBuffStr1;
@@ -14,12 +14,12 @@ global proc shelf_XGen () {
         -manage 1
         -visible 1
         -preventOverride 0
-        -annotation "Open the XGen Window" 
+        -annotation "Emitter: Generate moving or stationary particles in your simulations" 
         -enableBackground 0
         -backgroundColor 0 0 0 
         -highlightColor 0.321569 0.521569 0.65098 
         -align "center" 
-        -label "Open Description Editor" 
+        -label "Emitter" 
         -labelOffset 0
         -rotation 0
         -flipX 0
@@ -28,14 +28,14 @@ global proc shelf_XGen () {
         -font "plainLabelFont" 
         -overlayLabelColor 0.8 0.8 0.8 
         -overlayLabelBackColor 0 0 0 0.5 
-        -image "C:/Program Files/Autodesk/Maya2020/plug-ins/xgen//icons/xgDEditor.png" 
-        -image1 "C:/Program Files/Autodesk/Maya2020/plug-ins/xgen//icons/xgDEditor.png" 
+        -image "posEmitter.png" 
+        -image1 "posEmitter.png" 
         -style "iconOnly" 
         -marginWidth 1
         -marginHeight 1
-        -version "2015" 
-        -command "if (!`pluginInfo -q -loaded xgenToolkit`) loadPlugin xgenToolkit.mll;XgCreateDescriptionEditor" 
+        -command "NCreateEmitter" 
         -sourceType "mel" 
+        -doubleClickCommand "NCreateEmitterOptions" 
         -commandRepeatable 1
         -flat 1
     ;
@@ -49,12 +49,12 @@ global proc shelf_XGen () {
         -manage 1
         -visible 1
         -preventOverride 0
-        -annotation "Update the XGen Preview" 
+        -annotation "Add Emitter: Select the object(s) to emit nParticles" 
         -enableBackground 0
         -backgroundColor 0 0 0 
         -highlightColor 0.321569 0.521569 0.65098 
         -align "center" 
-        -label "Update Preview" 
+        -label "Add Emitter" 
         -labelOffset 0
         -rotation 0
         -flipX 0
@@ -63,482 +63,24 @@ global proc shelf_XGen () {
         -font "plainLabelFont" 
         -overlayLabelColor 0.8 0.8 0.8 
         -overlayLabelBackColor 0 0 0 0.5 
-        -image "C:/Program Files/Autodesk/Maya2020/plug-ins/xgen//icons/xgPreview.png" 
-        -image1 "C:/Program Files/Autodesk/Maya2020/plug-ins/xgen//icons/xgPreview.png" 
+        -image "emitter.png" 
+        -image1 "emitter.png" 
         -style "iconOnly" 
         -marginWidth 1
         -marginHeight 1
-        -version "2015" 
-        -command "XgPreview" 
+        -command "NEmitFromObject" 
         -sourceType "mel" 
-        -commandRepeatable 1
-        -flat 1
-    ;
-    shelfButton
-        -enableCommandRepeat 1
-        -flexibleWidthType 3
-        -flexibleWidthValue 32
-        -enable 1
-        -width 35
-        -height 34
-        -manage 1
-        -visible 1
-        -preventOverride 0
-        -annotation "Clear the XGen Preview" 
-        -enableBackground 0
-        -backgroundColor 0 0 0 
-        -highlightColor 0.321569 0.521569 0.65098 
-        -align "center" 
-        -label "Clear Preview" 
-        -labelOffset 0
-        -rotation 0
-        -flipX 0
-        -flipY 0
-        -useAlpha 1
-        -font "plainLabelFont" 
-        -overlayLabelColor 0.8 0.8 0.8 
-        -overlayLabelBackColor 0 0 0 0.5 
-        -image "C:/Program Files/Autodesk/Maya2020/plug-ins/xgen//icons/xgPreviewClear.png" 
-        -image1 "C:/Program Files/Autodesk/Maya2020/plug-ins/xgen//icons/xgPreviewClear.png" 
-        -style "iconOnly" 
-        -marginWidth 1
-        -marginHeight 1
-        -version "2015" 
-        -command "python(\"xgui.createDescriptionEditor(False).preview(True)\")" 
-        -sourceType "mel" 
-        -commandRepeatable 1
-        -flat 1
-    ;
-    shelfButton
-        -enableCommandRepeat 1
-        -flexibleWidthType 3
-        -flexibleWidthValue 32
-        -enable 1
-        -width 35
-        -height 34
-        -manage 1
-        -visible 1
-        -preventOverride 0
-        -annotation "Create a new XGen Description" 
-        -enableBackground 0
-        -backgroundColor 0 0 0 
-        -highlightColor 0.321569 0.521569 0.65098 
-        -align "center" 
-        -label "Create Description" 
-        -labelOffset 0
-        -rotation 0
-        -flipX 0
-        -flipY 0
-        -useAlpha 1
-        -font "plainLabelFont" 
-        -overlayLabelColor 0.8 0.8 0.8 
-        -overlayLabelBackColor 0 0 0 0.5 
-        -image "C:/Program Files/Autodesk/Maya2020/plug-ins/xgen//icons/xgCreateDescription.png" 
-        -image1 "C:/Program Files/Autodesk/Maya2020/plug-ins/xgen//icons/xgCreateDescription.png" 
-        -style "iconOnly" 
-        -marginWidth 1
-        -marginHeight 1
-        -version "2015" 
-        -command "if (!`pluginInfo -q -loaded xgenToolkit`) loadPlugin xgenToolkit.mll;XgCreateDescription" 
-        -sourceType "mel" 
-        -commandRepeatable 1
-        -flat 1
-    ;
-    shelfButton
-        -enableCommandRepeat 1
-        -flexibleWidthType 3
-        -flexibleWidthValue 32
-        -enable 1
-        -width 35
-        -height 34
-        -manage 1
-        -visible 1
-        -preventOverride 0
-        -annotation "Patches bindings menu." 
-        -enableBackground 0
-        -backgroundColor 0 0 0 
-        -highlightColor 0.321569 0.521569 0.65098 
-        -align "center" 
-        -label "Bind Patches" 
-        -labelOffset 0
-        -rotation 0
-        -flipX 0
-        -flipY 0
-        -useAlpha 1
-        -font "plainLabelFont" 
-        -overlayLabelColor 0.8 0.8 0.8 
-        -overlayLabelBackColor 0 0 0 0.5 
-        -image "C:/Program Files/Autodesk/Maya2020/plug-ins/xgen//icons/xgBindFaces.png" 
-        -image1 "C:/Program Files/Autodesk/Maya2020/plug-ins/xgen//icons/xgBindFaces.png" 
-        -style "iconOnly" 
-        -marginWidth 1
-        -marginHeight 1
-        -version "2015" 
-        -command "python(\"from PySide2 import QtGui, QtCore, QtWidgets\\nfrom PySide2.QtGui import *\\nfrom PySide2.QtCore import *\\nfrom PySide2.QtWidgets import *\\nm = QMenu()\\nm.addAction(u\\\"Add Selected Faces\\\",  lambda: xgui.createDescriptionEditor(False).modifyBinding(\\\"Append\\\") )\\nm.addAction(u\\\"Replace with Selected Faces\\\", lambda: xgui.createDescriptionEditor(False).modifyBinding(\\\"Replace\\\") )\\nm.addAction(u\\\"Remove Selected Faces\\\",  lambda: xgui.createDescriptionEditor(False).modifyBinding(\\\"Remove\\\") )\\nm.addAction(u\\\"Bind Faces Based on Map...\\\",     lambda: xgui.createDescriptionEditor(False).modifyBinding(\\\"Map\\\") )\\nm.addSeparator()\\nm.addAction(u\\\"Select Bound Faces\\\",  lambda: xgui.createDescriptionEditor(False).selectBinding() )\\nm.popup(QCursor.pos())\\n\")" 
-        -sourceType "mel" 
-        -commandRepeatable 1
-        -flat 1
-    ;
-    shelfButton
-        -enableCommandRepeat 1
-        -flexibleWidthType 3
-        -flexibleWidthValue 32
-        -enable 1
-        -width 35
-        -height 34
-        -manage 1
-        -visible 1
-        -preventOverride 0
-        -annotation "Add or Move Guides" 
-        -enableBackground 0
-        -backgroundColor 0 0 0 
-        -highlightColor 0.321569 0.521569 0.65098 
-        -align "center" 
-        -label "Add/Move Guides" 
-        -labelOffset 0
-        -rotation 0
-        -flipX 0
-        -flipY 0
-        -useAlpha 1
-        -font "plainLabelFont" 
-        -overlayLabelColor 0.8 0.8 0.8 
-        -overlayLabelBackColor 0 0 0 0.5 
-        -image "C:/Program Files/Autodesk/Maya2020/plug-ins/xgen//icons/xgGuideContext.png" 
-        -image1 "C:/Program Files/Autodesk/Maya2020/plug-ins/xgen//icons/xgGuideContext.png" 
-        -style "iconOnly" 
-        -marginWidth 1
-        -marginHeight 1
-        -version "2015" 
-        -command "XgGuideTool" 
-        -sourceType "mel" 
-        -commandRepeatable 1
-        -flat 1
-    ;
-    shelfButton
-        -enableCommandRepeat 1
-        -flexibleWidthType 3
-        -flexibleWidthValue 32
-        -enable 1
-        -width 35
-        -height 34
-        -manage 1
-        -visible 1
-        -preventOverride 0
-        -annotation "Hide/Show the Guides of the current XGen Description" 
-        -enableBackground 0
-        -backgroundColor 0 0 0 
-        -highlightColor 0.321569 0.521569 0.65098 
-        -align "center" 
-        -label "Toggle Guides Visibility" 
-        -labelOffset 0
-        -rotation 0
-        -flipX 0
-        -flipY 0
-        -useAlpha 1
-        -font "plainLabelFont" 
-        -overlayLabelColor 0.8 0.8 0.8 
-        -overlayLabelBackColor 0 0 0 0.5 
-        -image "C:/Program Files/Autodesk/Maya2020/plug-ins/xgen//icons/xgToggleGuide.png" 
-        -image1 "C:/Program Files/Autodesk/Maya2020/plug-ins/xgen//icons/xgToggleGuide.png" 
-        -style "iconOnly" 
-        -marginWidth 1
-        -marginHeight 1
-        -version "2015" 
-        -command "python(\"xgen.toggleGuideDisplay(xgui.createDescriptionEditor(False).currentDescription())\")" 
-        -sourceType "mel" 
-        -commandRepeatable 1
-        -flat 1
-    ;
-    shelfButton
-        -enableCommandRepeat 1
-        -flexibleWidthType 3
-        -flexibleWidthValue 32
-        -enable 1
-        -width 35
-        -height 34
-        -manage 1
-        -visible 1
-        -preventOverride 0
-        -annotation "Turn the Selectability of Guides on and off" 
-        -enableBackground 0
-        -backgroundColor 0 0 0 
-        -highlightColor 0.321569 0.521569 0.65098 
-        -align "center" 
-        -label "Toggle Guides Selectability" 
-        -labelOffset 0
-        -rotation 0
-        -flipX 0
-        -flipY 0
-        -useAlpha 1
-        -font "plainLabelFont" 
-        -overlayLabelColor 0.8 0.8 0.8 
-        -overlayLabelBackColor 0 0 0 0.5 
-        -image "C:/Program Files/Autodesk/Maya2020/plug-ins/xgen//icons/xgToggleGuideReference.png" 
-        -image1 "C:/Program Files/Autodesk/Maya2020/plug-ins/xgen//icons/xgToggleGuideReference.png" 
-        -style "iconOnly" 
-        -marginWidth 1
-        -marginHeight 1
-        -version "2015" 
-        -command "python(\"xgen.toggleGuideReference(xgui.createDescriptionEditor(False).currentDescription())\")" 
-        -sourceType "mel" 
-        -commandRepeatable 1
-        -flat 1
-    ;
-    shelfButton
-        -enableCommandRepeat 1
-        -flexibleWidthType 3
-        -flexibleWidthValue 32
-        -enable 1
-        -width 35
-        -height 34
-        -manage 1
-        -visible 1
-        -preventOverride 0
-        -annotation "Mirror selected Guides across the X-axis" 
-        -enableBackground 0
-        -backgroundColor 0 0 0 
-        -highlightColor 0.321569 0.521569 0.65098 
-        -align "center" 
-        -label "Mirror Guides X-axis" 
-        -labelOffset 0
-        -rotation 0
-        -flipX 0
-        -flipY 0
-        -useAlpha 1
-        -font "plainLabelFont" 
-        -overlayLabelColor 0.8 0.8 0.8 
-        -overlayLabelBackColor 0 0 0 0.5 
-        -image "C:/Program Files/Autodesk/Maya2020/plug-ins/xgen//icons/xgFlipGuides.png" 
-        -image1 "C:/Program Files/Autodesk/Maya2020/plug-ins/xgen//icons/xgFlipGuides.png" 
-        -style "iconOnly" 
-        -marginWidth 1
-        -marginHeight 1
-        -version "2015" 
-        -command "xgmFlipGuides( python(\"xgui.createDescriptionEditor(False).currentDescription()\") )" 
-        -sourceType "mel" 
-        -commandRepeatable 1
-        -flat 1
-    ;
-    shelfButton
-        -enableCommandRepeat 1
-        -flexibleWidthType 3
-        -flexibleWidthValue 32
-        -enable 1
-        -width 35
-        -height 34
-        -manage 1
-        -visible 1
-        -preventOverride 0
-        -annotation "Match XGen patch visibility to geometry visibility." 
-        -enableBackground 0
-        -backgroundColor 0 0 0 
-        -highlightColor 0.321569 0.521569 0.65098 
-        -align "center" 
-        -label "Sync Patch Visibility" 
-        -labelOffset 0
-        -rotation 0
-        -flipX 0
-        -flipY 0
-        -useAlpha 1
-        -font "plainLabelFont" 
-        -overlayLabelColor 0.8 0.8 0.8 
-        -overlayLabelBackColor 0 0 0 0.5 
-        -image "C:/Program Files/Autodesk/Maya2020/plug-ins/xgen//icons/xgSyncPatchVisibility.png" 
-        -image1 "C:/Program Files/Autodesk/Maya2020/plug-ins/xgen//icons/xgSyncPatchVisibility.png" 
-        -style "iconOnly" 
-        -marginWidth 1
-        -marginHeight 1
-        -version "2015" 
-        -command "xgmSyncPatchVisibility" 
-        -sourceType "mel" 
-        -commandRepeatable 1
-        -flat 1
-    ;
-    shelfButton
-        -enableCommandRepeat 1
-        -flexibleWidthType 3
-        -flexibleWidthValue 32
-        -enable 1
-        -width 35
-        -height 34
-        -manage 1
-        -visible 1
-        -preventOverride 0
-        -annotation "Flip selected between patches and their associated geometry" 
-        -enableBackground 0
-        -backgroundColor 0 0 0 
-        -highlightColor 0.321569 0.521569 0.65098 
-        -align "center" 
-        -label "Flip Selected" 
-        -labelOffset 0
-        -rotation 0
-        -flipX 0
-        -flipY 0
-        -useAlpha 1
-        -font "plainLabelFont" 
-        -overlayLabelColor 0.8 0.8 0.8 
-        -overlayLabelBackColor 0 0 0 0.5 
-        -image "C:/Program Files/Autodesk/Maya2020/plug-ins/xgen//icons/xgSelectionToggle.png" 
-        -image1 "C:/Program Files/Autodesk/Maya2020/plug-ins/xgen//icons/xgSelectionToggle.png" 
-        -style "iconOnly" 
-        -marginWidth 1
-        -marginHeight 1
-        -version "2015" 
-        -command "python(\"xgen.selectionToggle(xgui.createDescriptionEditor(False).currentDescription())\")" 
-        -sourceType "mel" 
-        -commandRepeatable 1
-        -flat 1
-    ;
-    shelfButton
-        -enableCommandRepeat 1
-        -flexibleWidthType 3
-        -flexibleWidthValue 32
-        -enable 1
-        -width 35
-        -height 34
-        -manage 1
-        -visible 1
-        -preventOverride 0
-        -annotation "Select Primitives\nMMB to Isolate Primitves" 
-        -enableBackground 0
-        -backgroundColor 0 0 0 
-        -highlightColor 0.321569 0.521569 0.65098 
-        -align "center" 
-        -label "Select Primitives" 
-        -labelOffset 0
-        -rotation 0
-        -flipX 0
-        -flipY 0
-        -useAlpha 1
-        -font "plainLabelFont" 
-        -overlayLabelColor 0.8 0.8 0.8 
-        -overlayLabelBackColor 0 0 0 0.5 
-        -image "C:/Program Files/Autodesk/Maya2020/plug-ins/xgen//icons/xgPrimSelection.png" 
-        -image1 "C:/Program Files/Autodesk/Maya2020/plug-ins/xgen//icons/xgPrimSelection.png" 
-        -style "iconOnly" 
-        -marginWidth 1
-        -marginHeight 1
-        -version "2015" 
-        -command "python(\"xgui.createDescriptionEditor(False).primSelectionContext()\")" 
-        -sourceType "mel" 
-        -commandRepeatable 1
-        -flat 1
-    ;
-    shelfButton
-        -enableCommandRepeat 1
-        -flexibleWidthType 3
-        -flexibleWidthValue 32
-        -enable 1
-        -width 35
-        -height 34
-        -manage 1
-        -visible 1
-        -preventOverride 0
-        -annotation "Cull selected Primitves\nMore culling options can be found in the Generator Tab" 
-        -enableBackground 0
-        -backgroundColor 0 0 0 
-        -highlightColor 0.321569 0.521569 0.65098 
-        -align "center" 
-        -label "Cull Primitives" 
-        -labelOffset 0
-        -rotation 0
-        -flipX 0
-        -flipY 0
-        -useAlpha 1
-        -font "plainLabelFont" 
-        -overlayLabelColor 0.8 0.8 0.8 
-        -overlayLabelBackColor 0 0 0 0.5 
-        -image "C:/Program Files/Autodesk/Maya2020/plug-ins/xgen//icons/xgCullPrimContextSelect.png" 
-        -image1 "C:/Program Files/Autodesk/Maya2020/plug-ins/xgen//icons/xgCullPrimContextSelect.png" 
-        -style "iconOnly" 
-        -marginWidth 1
-        -marginHeight 1
-        -version "2015" 
-        -command "python(\"xgui.createDescriptionEditor(False).cullSelectedPrimitives()\")" 
-        -sourceType "mel" 
-        -commandRepeatable 1
-        -flat 1
-    ;
-    shelfButton
-        -enableCommandRepeat 1
-        -flexibleWidthType 3
-        -flexibleWidthValue 32
-        -enable 1
-        -width 35
-        -height 34
-        -manage 1
-        -visible 1
-        -preventOverride 0
-        -annotation "Sculpt guides" 
-        -enableBackground 0
-        -backgroundColor 0 0 0 
-        -highlightColor 0.321569 0.521569 0.65098 
-        -align "center" 
-        -label "Sculpt Guides" 
-        -labelOffset 0
-        -rotation 0
-        -flipX 0
-        -flipY 0
-        -useAlpha 1
-        -font "plainLabelFont" 
-        -overlayLabelColor 0.8 0.8 0.8 
-        -overlayLabelBackColor 0 0 0 0.5 
-        -image "C:/Program Files/Autodesk/Maya2020/plug-ins/xgen//icons/xgGuideSculptTool.png" 
-        -image1 "C:/Program Files/Autodesk/Maya2020/plug-ins/xgen//icons/xgGuideSculptTool.png" 
-        -style "iconOnly" 
-        -marginWidth 1
-        -marginHeight 1
-        -version "2016" 
-        -command "python(\"xgui.createDescriptionEditor(False).guideSculptContext(False)\")" 
-        -sourceType "mel" 
-        -doubleClickCommand "python(\"xgui.createDescriptionEditor(False).guideSculptContext(True)\")" 
-        -commandRepeatable 1
-        -flat 1
-    ;
-    shelfButton
-        -enableCommandRepeat 1
-        -flexibleWidthType 3
-        -flexibleWidthValue 32
-        -enable 1
-        -width 35
-        -height 34
-        -manage 1
-        -visible 1
-        -preventOverride 0
-        -annotation "Convert primitives to polygons" 
-        -enableBackground 0
-        -backgroundColor 0 0 0 
-        -highlightColor 0.321569 0.521569 0.65098 
-        -align "center" 
-        -label "Convert Primitives to Polygons" 
-        -labelOffset 0
-        -rotation 0
-        -flipX 0
-        -flipY 0
-        -useAlpha 1
-        -font "plainLabelFont" 
-        -overlayLabelColor 0.8 0.8 0.8 
-        -overlayLabelBackColor 0 0 0 0.5 
-        -image "C:/Program Files/Autodesk/Maya2020/plug-ins/xgen//icons/xgConvertToPoly.png" 
-        -image1 "C:/Program Files/Autodesk/Maya2020/plug-ins/xgen//icons/xgConvertToPoly.png" 
-        -style "iconOnly" 
-        -marginWidth 1
-        -marginHeight 1
-        -version "2017" 
-        -command "python(\"import xgenm.xmaya.xgmConvertPrimToPolygon as cpp;cpp.convertPrimToPolygon(False)\")" 
-        -sourceType "mel" 
-        -doubleClickCommand "python(\"import xgenm.xmaya.xgmConvertPrimToPolygon as cpp;cpp.convertPrimToPolygon(True)\")" 
+        -doubleClickCommand "NEmitFromObjectOptions" 
         -commandRepeatable 1
         -flat 1
     ;
     separator
         -enable 1
-        -width 34
+        -width 12
         -height 35
         -manage 1
         -visible 1
         -preventOverride 0
-        -annotation "XGenSeparator" 
         -enableBackground 0
         -backgroundColor 0 0 0 
         -highlightColor 0.321569 0.521569 0.65098 
@@ -555,12 +97,12 @@ global proc shelf_XGen () {
         -manage 1
         -visible 1
         -preventOverride 0
-        -annotation "Open the Interactive Groom Editor to create, edit, and manage grooms." 
+        -annotation "3D Fluid Container with Emitter: Create an emitter and a 3D fluid container" 
         -enableBackground 0
         -backgroundColor 0 0 0 
         -highlightColor 0.321569 0.521569 0.65098 
         -align "center" 
-        -label "Interactive Groom Editor" 
+        -label "3D Fluid Container with Emitter" 
         -labelOffset 0
         -rotation 0
         -flipX 0
@@ -569,13 +111,165 @@ global proc shelf_XGen () {
         -font "plainLabelFont" 
         -overlayLabelColor 0.8 0.8 0.8 
         -overlayLabelBackColor 0 0 0 0.5 
-        -image "C:/Program Files/Autodesk/Maya2020/plug-ins/xgen//icons/xgIG_editor.png" 
-        -image1 "C:/Program Files/Autodesk/Maya2020/plug-ins/xgen//icons/xgIG_editor.png" 
+        -image "fluidCreate3D.png" 
+        -image1 "fluidCreate3D.png" 
         -style "iconOnly" 
         -marginWidth 1
         -marginHeight 1
-        -version "2017" 
-        -command "XgCreateIgSplineEditor" 
+        -command "Create3DContainerEmitter" 
+        -sourceType "mel" 
+        -doubleClickCommand "Create3DContainerEmitterOptions" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -flexibleWidthType 3
+        -flexibleWidthValue 32
+        -enable 1
+        -width 35
+        -height 34
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "2D Fluid Container with Emitter: Create an emitter and a 2D fluid container" 
+        -enableBackground 0
+        -backgroundColor 0 0 0 
+        -highlightColor 0.321569 0.521569 0.65098 
+        -align "center" 
+        -label "2D Fluid Container with Emitter" 
+        -labelOffset 0
+        -rotation 0
+        -flipX 0
+        -flipY 0
+        -useAlpha 1
+        -font "plainLabelFont" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0 0 0 0.5 
+        -image "fluidCreate2D.png" 
+        -image1 "fluidCreate2D.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "Create2DContainerEmitter" 
+        -sourceType "mel" 
+        -doubleClickCommand "Create2DContainerEmitterOptions" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -flexibleWidthType 3
+        -flexibleWidthValue 32
+        -enable 1
+        -width 35
+        -height 34
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "Emit Fluid from Object: Select a fluid and the emitting object(s)" 
+        -enableBackground 0
+        -backgroundColor 0 0 0 
+        -highlightColor 0.321569 0.521569 0.65098 
+        -align "center" 
+        -label "Emit Fluid from Object" 
+        -labelOffset 0
+        -rotation 0
+        -flipX 0
+        -flipY 0
+        -useAlpha 1
+        -font "plainLabelFont" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0 0 0 0.5 
+        -image "fluidObjectEmit.png" 
+        -image1 "fluidObjectEmit.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "EmitFluidFromObject" 
+        -sourceType "mel" 
+        -doubleClickCommand "EmitFluidFromObjectOptions" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -flexibleWidthType 3
+        -flexibleWidthValue 32
+        -enable 1
+        -width 35
+        -height 34
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "Make Collide: Select fluid object(s) and geometry object(s) to collide" 
+        -enableBackground 0
+        -backgroundColor 0 0 0 
+        -highlightColor 0.321569 0.521569 0.65098 
+        -align "center" 
+        -label "Make Collide" 
+        -labelOffset 0
+        -rotation 0
+        -flipX 0
+        -flipY 0
+        -useAlpha 1
+        -font "plainLabelFont" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0 0 0 0.5 
+        -image "fluidCollide.png" 
+        -image1 "fluidCollide.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "MakeFluidCollide" 
+        -sourceType "mel" 
+        -doubleClickCommand "MakeFluidCollideOptions" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    separator
+        -enable 1
+        -width 12
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -enableBackground 0
+        -backgroundColor 0 0 0 
+        -highlightColor 0.321569 0.521569 0.65098 
+        -style "shelf" 
+        -horizontal 0
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -flexibleWidthType 3
+        -flexibleWidthValue 32
+        -enable 1
+        -width 35
+        -height 34
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "Create Hair: Create hair options" 
+        -enableBackground 0
+        -backgroundColor 0 0 0 
+        -highlightColor 0.321569 0.521569 0.65098 
+        -align "center" 
+        -label "Create Hair" 
+        -labelOffset 0
+        -rotation 0
+        -flipX 0
+        -flipY 0
+        -useAlpha 1
+        -font "plainLabelFont" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0 0 0 0.5 
+        -image "hairCreate.png" 
+        -image1 "hairCreate.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "CreateHairOptions" 
         -sourceType "mel" 
         -commandRepeatable 1
         -flat 1
@@ -590,12 +284,12 @@ global proc shelf_XGen () {
         -manage 1
         -visible 1
         -preventOverride 0
-        -annotation "Create Interactive Groom Splines" 
+        -annotation "Paint hair tool options" 
         -enableBackground 0
         -backgroundColor 0 0 0 
         -highlightColor 0.321569 0.521569 0.65098 
         -align "center" 
-        -label "Create Interactive Groom Splines" 
+        -label "Paint Hair Tool Options" 
         -labelOffset 0
         -rotation 0
         -flipX 0
@@ -604,15 +298,13 @@ global proc shelf_XGen () {
         -font "plainLabelFont" 
         -overlayLabelColor 0.8 0.8 0.8 
         -overlayLabelBackColor 0 0 0 0.5 
-        -image "C:/Program Files/Autodesk/Maya2020/plug-ins/xgen//icons/xgIG_creation.png" 
-        -image1 "C:/Program Files/Autodesk/Maya2020/plug-ins/xgen//icons/xgIG_creation.png" 
+        -image "hairPaint.png" 
+        -image1 "hairPaint.png" 
         -style "iconOnly" 
         -marginWidth 1
         -marginHeight 1
-        -version "2017" 
-        -command "XgmCreateInteractiveGroomSplinesOption" 
+        -command "paintHairTool 1" 
         -sourceType "mel" 
-        -doubleClickCommand "XgmCreateInteractiveGroomSplinesOption" 
         -commandRepeatable 1
         -flat 1
     ;
@@ -626,12 +318,12 @@ global proc shelf_XGen () {
         -manage 1
         -visible 1
         -preventOverride 0
-        -annotation "Add or reduce the number of hairs." 
+        -annotation "Make Selected Curves Dynamic: Make selected curves dynamic" 
         -enableBackground 0
         -backgroundColor 0 0 0 
         -highlightColor 0.321569 0.521569 0.65098 
         -align "center" 
-        -label "Density Brush" 
+        -label "Make Selected Curves Dynamic" 
         -labelOffset 0
         -rotation 0
         -flipX 0
@@ -640,15 +332,13 @@ global proc shelf_XGen () {
         -font "plainLabelFont" 
         -overlayLabelColor 0.8 0.8 0.8 
         -overlayLabelBackColor 0 0 0 0.5 
-        -image "C:/Program Files/Autodesk/Maya2020/plug-ins/xgen//icons/xgIG_density.png" 
-        -image1 "C:/Program Files/Autodesk/Maya2020/plug-ins/xgen//icons/xgIG_density.png" 
+        -image "hairDynamicCurves.png" 
+        -image1 "hairDynamicCurves.png" 
         -style "iconOnly" 
         -marginWidth 1
         -marginHeight 1
-        -version "2017" 
-        -command "XgmSetDensityBrushTool" 
+        -command "MakeCurvesDynamic" 
         -sourceType "mel" 
-        -doubleClickCommand "XgmSetDensityBrushToolOption" 
         -commandRepeatable 1
         -flat 1
     ;
@@ -662,12 +352,12 @@ global proc shelf_XGen () {
         -manage 1
         -visible 1
         -preventOverride 0
-        -annotation "Adds a single hair." 
+        -annotation "Current Position: Display current position curves or pfxHair for selected or all hair systems" 
         -enableBackground 0
         -backgroundColor 0 0 0 
         -highlightColor 0.321569 0.521569 0.65098 
         -align "center" 
-        -label "Place Brush" 
+        -label "Current Position" 
         -labelOffset 0
         -rotation 0
         -flipX 0
@@ -676,15 +366,13 @@ global proc shelf_XGen () {
         -font "plainLabelFont" 
         -overlayLabelColor 0.8 0.8 0.8 
         -overlayLabelBackColor 0 0 0 0.5 
-        -image "C:/Program Files/Autodesk/Maya2020/plug-ins/xgen//icons/xgIG_place.png" 
-        -image1 "C:/Program Files/Autodesk/Maya2020/plug-ins/xgen//icons/xgIG_place.png" 
+        -image "hairDisplayCurrent.png" 
+        -image1 "hairDisplayCurrent.png" 
         -style "iconOnly" 
         -marginWidth 1
         -marginHeight 1
-        -version "2017" 
-        -command "XgmSetPlaceBrushTool" 
+        -command "displayHairCurves \"current\" 1" 
         -sourceType "mel" 
-        -doubleClickCommand "XgmSetPlaceBrushToolOption" 
         -commandRepeatable 1
         -flat 1
     ;
@@ -698,12 +386,12 @@ global proc shelf_XGen () {
         -manage 1
         -visible 1
         -preventOverride 0
-        -annotation "Lengthen or shorten hairs." 
+        -annotation "Start Position: Display start position curves for selected or all hair systems" 
         -enableBackground 0
         -backgroundColor 0 0 0 
         -highlightColor 0.321569 0.521569 0.65098 
         -align "center" 
-        -label "Length Brush" 
+        -label "Start Position" 
         -labelOffset 0
         -rotation 0
         -flipX 0
@@ -712,15 +400,13 @@ global proc shelf_XGen () {
         -font "plainLabelFont" 
         -overlayLabelColor 0.8 0.8 0.8 
         -overlayLabelBackColor 0 0 0 0.5 
-        -image "C:/Program Files/Autodesk/Maya2020/plug-ins/xgen//icons/xgIG_length.png" 
-        -image1 "C:/Program Files/Autodesk/Maya2020/plug-ins/xgen//icons/xgIG_length.png" 
+        -image "hairDisplayStart.png" 
+        -image1 "hairDisplayStart.png" 
         -style "iconOnly" 
         -marginWidth 1
         -marginHeight 1
-        -version "2017" 
-        -command "XgmSetLengthBrushTool" 
+        -command "displayHairCurves \"start\" 1" 
         -sourceType "mel" 
-        -doubleClickCommand "XgmSetLengthBrushToolOption" 
         -commandRepeatable 1
         -flat 1
     ;
@@ -734,12 +420,12 @@ global proc shelf_XGen () {
         -manage 1
         -visible 1
         -preventOverride 0
-        -annotation "Trim hairs." 
+        -annotation "Rest Position: Display rest position curves for selected or all hair systems" 
         -enableBackground 0
         -backgroundColor 0 0 0 
         -highlightColor 0.321569 0.521569 0.65098 
         -align "center" 
-        -label "Cut Brush" 
+        -label "Rest Position" 
         -labelOffset 0
         -rotation 0
         -flipX 0
@@ -748,15 +434,13 @@ global proc shelf_XGen () {
         -font "plainLabelFont" 
         -overlayLabelColor 0.8 0.8 0.8 
         -overlayLabelBackColor 0 0 0 0.5 
-        -image "C:/Program Files/Autodesk/Maya2020/plug-ins/xgen//icons/xgIG_cut.png" 
-        -image1 "C:/Program Files/Autodesk/Maya2020/plug-ins/xgen//icons/xgIG_cut.png" 
+        -image "hairDisplayRest.png" 
+        -image1 "hairDisplayRest.png" 
         -style "iconOnly" 
         -marginWidth 1
         -marginHeight 1
-        -version "2017" 
-        -command "XgmSetCutBrushTool" 
+        -command "displayHairCurves \"rest\" 1" 
         -sourceType "mel" 
-        -doubleClickCommand "XgmSetCutBrushToolOption" 
         -commandRepeatable 1
         -flat 1
     ;
@@ -770,12 +454,12 @@ global proc shelf_XGen () {
         -manage 1
         -visible 1
         -preventOverride 0
-        -annotation "Scales the width of hairs." 
+        -annotation "To Hair Systems: Select hair system nodes related to current selection" 
         -enableBackground 0
         -backgroundColor 0 0 0 
         -highlightColor 0.321569 0.521569 0.65098 
         -align "center" 
-        -label "Width Brush" 
+        -label "To Hair Systems" 
         -labelOffset 0
         -rotation 0
         -flipX 0
@@ -784,15 +468,13 @@ global proc shelf_XGen () {
         -font "plainLabelFont" 
         -overlayLabelColor 0.8 0.8 0.8 
         -overlayLabelBackColor 0 0 0 0.5 
-        -image "C:/Program Files/Autodesk/Maya2020/plug-ins/xgen//icons/xgIG_width.png" 
-        -image1 "C:/Program Files/Autodesk/Maya2020/plug-ins/xgen//icons/xgIG_width.png" 
+        -image "hairConvertHairSystem.png" 
+        -image1 "hairConvertHairSystem.png" 
         -style "iconOnly" 
         -marginWidth 1
         -marginHeight 1
-        -version "2017" 
-        -command "XgmSetWidthBrushTool" 
+        -command "convertHairSelection \"hairSystems\"" 
         -sourceType "mel" 
-        -doubleClickCommand "XgmSetWidthBrushToolOption" 
         -commandRepeatable 1
         -flat 1
     ;
@@ -806,12 +488,12 @@ global proc shelf_XGen () {
         -manage 1
         -visible 1
         -preventOverride 0
-        -annotation "Rotates the primitive faces of hairs." 
+        -annotation "To Follicles: Select follicles related to current selection" 
         -enableBackground 0
         -backgroundColor 0 0 0 
         -highlightColor 0.321569 0.521569 0.65098 
         -align "center" 
-        -label "Twist Brush" 
+        -label "To Follicles" 
         -labelOffset 0
         -rotation 0
         -flipX 0
@@ -820,15 +502,13 @@ global proc shelf_XGen () {
         -font "plainLabelFont" 
         -overlayLabelColor 0.8 0.8 0.8 
         -overlayLabelBackColor 0 0 0 0.5 
-        -image "C:/Program Files/Autodesk/Maya2020/plug-ins/xgen//icons/xgIG_twist.png" 
-        -image1 "C:/Program Files/Autodesk/Maya2020/plug-ins/xgen//icons/xgIG_twist.png" 
+        -image "hairConvertFollicles.png" 
+        -image1 "hairConvertFollicles.png" 
         -style "iconOnly" 
         -marginWidth 1
         -marginHeight 1
-        -version "2017" 
-        -command "XgmSetDirectionBrushTool" 
+        -command "convertHairSelection \"follicles\"" 
         -sourceType "mel" 
-        -doubleClickCommand "XgmSetDirectionBrushToolOption" 
         -commandRepeatable 1
         -flat 1
     ;
@@ -842,12 +522,12 @@ global proc shelf_XGen () {
         -manage 1
         -visible 1
         -preventOverride 0
-        -annotation "Change the orientation and bend of hairs in the direction of the brush stroke." 
+        -annotation "To Start Curves: Select start curves related to current selection" 
         -enableBackground 0
         -backgroundColor 0 0 0 
         -highlightColor 0.321569 0.521569 0.65098 
         -align "center" 
-        -label "Comb Brush" 
+        -label "To Start Curves" 
         -labelOffset 0
         -rotation 0
         -flipX 0
@@ -856,15 +536,13 @@ global proc shelf_XGen () {
         -font "plainLabelFont" 
         -overlayLabelColor 0.8 0.8 0.8 
         -overlayLabelBackColor 0 0 0 0.5 
-        -image "C:/Program Files/Autodesk/Maya2020/plug-ins/xgen//icons/xgIG_comb.png" 
-        -image1 "C:/Program Files/Autodesk/Maya2020/plug-ins/xgen//icons/xgIG_comb.png" 
+        -image "hairConvertStart.png" 
+        -image1 "hairConvertStart.png" 
         -style "iconOnly" 
         -marginWidth 1
         -marginHeight 1
-        -version "2017" 
-        -command "XgmSetCombBrushTool" 
+        -command "convertHairSelection \"startCurves\"" 
         -sourceType "mel" 
-        -doubleClickCommand "XgmSetCombBrushToolOption" 
         -commandRepeatable 1
         -flat 1
     ;
@@ -878,12 +556,12 @@ global proc shelf_XGen () {
         -manage 1
         -visible 1
         -preventOverride 0
-        -annotation "Pulls a selection of hairs in any direction." 
+        -annotation "To Rest Curves: Select rest curves related to current selection" 
         -enableBackground 0
         -backgroundColor 0 0 0 
         -highlightColor 0.321569 0.521569 0.65098 
         -align "center" 
-        -label "Grab Brush" 
+        -label "To Rest Curves" 
         -labelOffset 0
         -rotation 0
         -flipX 0
@@ -892,15 +570,13 @@ global proc shelf_XGen () {
         -font "plainLabelFont" 
         -overlayLabelColor 0.8 0.8 0.8 
         -overlayLabelBackColor 0 0 0 0.5 
-        -image "C:/Program Files/Autodesk/Maya2020/plug-ins/xgen//icons/xgIG_grab.png" 
-        -image1 "C:/Program Files/Autodesk/Maya2020/plug-ins/xgen//icons/xgIG_grab.png" 
+        -image "hairConvertRest.png" 
+        -image1 "hairConvertRest.png" 
         -style "iconOnly" 
         -marginWidth 1
         -marginHeight 1
-        -version "2017" 
-        -command "XgmSetGrabBrushTool" 
+        -command "convertHairSelection \"restCurves\"" 
         -sourceType "mel" 
-        -doubleClickCommand "XgmSetGrabBrushToolOption" 
         -commandRepeatable 1
         -flat 1
     ;
@@ -914,12 +590,12 @@ global proc shelf_XGen () {
         -manage 1
         -visible 1
         -preventOverride 0
-        -annotation "Straightens hairs or smooth transitions between hairs of different size and shape." 
+        -annotation "Scale Hair Tool: Select hairs (directly or indirectly) then drag left and right to scale" 
         -enableBackground 0
         -backgroundColor 0 0 0 
         -highlightColor 0.321569 0.521569 0.65098 
         -align "center" 
-        -label "Smooth Brush" 
+        -label "Scale Hair Tool" 
         -labelOffset 0
         -rotation 0
         -flipX 0
@@ -928,15 +604,13 @@ global proc shelf_XGen () {
         -font "plainLabelFont" 
         -overlayLabelColor 0.8 0.8 0.8 
         -overlayLabelBackColor 0 0 0 0.5 
-        -image "C:/Program Files/Autodesk/Maya2020/plug-ins/xgen//icons/xgIG_smooth.png" 
-        -image1 "C:/Program Files/Autodesk/Maya2020/plug-ins/xgen//icons/xgIG_smooth.png" 
+        -image "hairScaleTool.png" 
+        -image1 "hairScaleTool.png" 
         -style "iconOnly" 
         -marginWidth 1
         -marginHeight 1
-        -version "2017" 
-        -command "XgmSetSmoothBrushTool" 
+        -command "scaleHairCtx" 
         -sourceType "mel" 
-        -doubleClickCommand "XgmSetSmoothBrushToolOption" 
         -commandRepeatable 1
         -flat 1
     ;
@@ -950,12 +624,12 @@ global proc shelf_XGen () {
         -manage 1
         -visible 1
         -preventOverride 0
-        -annotation "Noise Tool: Paint 3D noise to vary hair orientation making hair appear more natural." 
+        -annotation "To Start Curve End CVs: Select start curve end CVs related to current selection" 
         -enableBackground 0
         -backgroundColor 0 0 0 
         -highlightColor 0.321569 0.521569 0.65098 
         -align "center" 
-        -label "Noise Brush" 
+        -label "To Start Curve End CVs" 
         -labelOffset 0
         -rotation 0
         -flipX 0
@@ -964,15 +638,13 @@ global proc shelf_XGen () {
         -font "plainLabelFont" 
         -overlayLabelColor 0.8 0.8 0.8 
         -overlayLabelBackColor 0 0 0 0.5 
-        -image "C:/Program Files/Autodesk/Maya2020/plug-ins/xgen//icons/xgIG_noise.png" 
-        -image1 "C:/Program Files/Autodesk/Maya2020/plug-ins/xgen//icons/xgIG_noise.png" 
+        -image "hairConvertStartEndCVs.png" 
+        -image1 "hairConvertStartEndCVs.png" 
         -style "iconOnly" 
         -marginWidth 1
         -marginHeight 1
-        -version "2017" 
-        -command "XgmSetNoiseBrushTool" 
+        -command "convertHairSelection \"startCurveEndCvs\"\r\n" 
         -sourceType "mel" 
-        -doubleClickCommand "XgmSetNoiseBrushToolOption" 
         -commandRepeatable 1
         -flat 1
     ;
@@ -986,12 +658,12 @@ global proc shelf_XGen () {
         -manage 1
         -visible 1
         -preventOverride 0
-        -annotation "Pull hairs together to form clumps." 
+        -annotation "To Rest Curve End CVs: Select rest curve end CVs related to current selection" 
         -enableBackground 0
         -backgroundColor 0 0 0 
         -highlightColor 0.321569 0.521569 0.65098 
         -align "center" 
-        -label "Clump Brush" 
+        -label "To Rest Curve End CVs" 
         -labelOffset 0
         -rotation 0
         -flipX 0
@@ -1000,15 +672,13 @@ global proc shelf_XGen () {
         -font "plainLabelFont" 
         -overlayLabelColor 0.8 0.8 0.8 
         -overlayLabelBackColor 0 0 0 0.5 
-        -image "C:/Program Files/Autodesk/Maya2020/plug-ins/xgen//icons/xgIG_clump.png" 
-        -image1 "C:/Program Files/Autodesk/Maya2020/plug-ins/xgen//icons/xgIG_clump.png" 
+        -image "hairConvertRestEndCVs.png" 
+        -image1 "hairConvertRestEndCVs.png" 
         -style "iconOnly" 
         -marginWidth 1
         -marginHeight 1
-        -version "2017" 
-        -command "XgmSetClumpBrushTool" 
+        -command "convertHairSelection \"restCurveEndCvs\"\r\n" 
         -sourceType "mel" 
-        -doubleClickCommand "XgmSetClumpBrushToolOption" 
         -commandRepeatable 1
         -flat 1
     ;
@@ -1022,12 +692,12 @@ global proc shelf_XGen () {
         -manage 1
         -visible 1
         -preventOverride 0
-        -annotation "Push hairs away from each other." 
+        -annotation "From Current: Set start position to current position for selected hairs" 
         -enableBackground 0
         -backgroundColor 0 0 0 
         -highlightColor 0.321569 0.521569 0.65098 
         -align "center" 
-        -label "Part Brush" 
+        -label "From Current" 
         -labelOffset 0
         -rotation 0
         -flipX 0
@@ -1036,15 +706,13 @@ global proc shelf_XGen () {
         -font "plainLabelFont" 
         -overlayLabelColor 0.8 0.8 0.8 
         -overlayLabelBackColor 0 0 0 0.5 
-        -image "C:/Program Files/Autodesk/Maya2020/plug-ins/xgen//icons/xgIG_part.png" 
-        -image1 "C:/Program Files/Autodesk/Maya2020/plug-ins/xgen//icons/xgIG_part.png" 
+        -image "hairStartFromCurrent.png" 
+        -image1 "hairStartFromCurrent.png" 
         -style "iconOnly" 
         -marginWidth 1
         -marginHeight 1
-        -version "2017" 
-        -command "XgmSetPartBrushTool" 
+        -command "setSelectedHairCurves \"current\" \"start\"" 
         -sourceType "mel" 
-        -doubleClickCommand "XgmSetPartBrushToolOption" 
         -commandRepeatable 1
         -flat 1
     ;
@@ -1058,12 +726,12 @@ global proc shelf_XGen () {
         -manage 1
         -visible 1
         -preventOverride 0
-        -annotation "Lock hairs so they cannot be modified." 
+        -annotation "Current and Start: Display current and start position curves for selected or all hair systems" 
         -enableBackground 0
         -backgroundColor 0 0 0 
         -highlightColor 0.321569 0.521569 0.65098 
         -align "center" 
-        -label "Freeze Brush" 
+        -label "Current and Start" 
         -labelOffset 0
         -rotation 0
         -flipX 0
@@ -1072,15 +740,13 @@ global proc shelf_XGen () {
         -font "plainLabelFont" 
         -overlayLabelColor 0.8 0.8 0.8 
         -overlayLabelBackColor 0 0 0 0.5 
-        -image "C:/Program Files/Autodesk/Maya2020/plug-ins/xgen//icons/xgIG_freeze.png" 
-        -image1 "C:/Program Files/Autodesk/Maya2020/plug-ins/xgen//icons/xgIG_freeze.png" 
+        -image "hairDisplayCurrentStart.png" 
+        -image1 "hairDisplayCurrentStart.png" 
         -style "iconOnly" 
         -marginWidth 1
         -marginHeight 1
-        -version "2017" 
-        -command "XgmSetFreezeBrushTool" 
+        -command "displayHairCurves \"currentAndStart\" 1" 
         -sourceType "mel" 
-        -doubleClickCommand "XgmSetFreezeBrushToolOption" 
         -commandRepeatable 1
         -flat 1
     ;
@@ -1094,12 +760,12 @@ global proc shelf_XGen () {
         -manage 1
         -visible 1
         -preventOverride 0
-        -annotation "Select hairs by painting." 
+        -annotation "From Current: Set rest position to current position for selected hairs" 
         -enableBackground 0
         -backgroundColor 0 0 0 
         -highlightColor 0.321569 0.521569 0.65098 
         -align "center" 
-        -label "Select Brush" 
+        -label "From Current" 
         -labelOffset 0
         -rotation 0
         -flipX 0
@@ -1108,15 +774,279 @@ global proc shelf_XGen () {
         -font "plainLabelFont" 
         -overlayLabelColor 0.8 0.8 0.8 
         -overlayLabelBackColor 0 0 0 0.5 
-        -image "C:/Program Files/Autodesk/Maya2020/plug-ins/xgen//icons/xgIG_select.png" 
-        -image1 "C:/Program Files/Autodesk/Maya2020/plug-ins/xgen//icons/xgIG_select.png" 
+        -image "hairRestFromCurrent.png" 
+        -image1 "hairRestFromCurrent.png" 
         -style "iconOnly" 
         -marginWidth 1
         -marginHeight 1
-        -version "2017" 
-        -command "XgmSetSelectBrushTool" 
+        -command "setSelectedHairCurves \"current\" \"rest\"" 
         -sourceType "mel" 
-        -doubleClickCommand "XgmSetSelectBrushToolOption" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -flexibleWidthType 3
+        -flexibleWidthValue 32
+        -enable 1
+        -width 35
+        -height 34
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "Current and Rest: Display current and rest position curves for selected or all hair systems" 
+        -enableBackground 0
+        -backgroundColor 0 0 0 
+        -highlightColor 0.321569 0.521569 0.65098 
+        -align "center" 
+        -label "Current and Rest" 
+        -labelOffset 0
+        -rotation 0
+        -flipX 0
+        -flipY 0
+        -useAlpha 1
+        -font "plainLabelFont" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0 0 0 0.5 
+        -image "hairDisplayCurrentRest.png" 
+        -image1 "hairDisplayCurrentRest.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "displayHairCurves \"currentAndRest\" 1" 
+        -sourceType "mel" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    separator
+        -enable 1
+        -width 12
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -enableBackground 0
+        -backgroundColor 0 0 0 
+        -highlightColor 0.321569 0.521569 0.65098 
+        -style "shelf" 
+        -horizontal 0
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -flexibleWidthType 3
+        -flexibleWidthValue 32
+        -enable 1
+        -width 35
+        -height 34
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "Create nCloth from the selected mesh." 
+        -enableBackground 0
+        -backgroundColor 0 0 0 
+        -highlightColor 0.321569 0.521569 0.65098 
+        -align "center" 
+        -label "Create nCloth" 
+        -labelOffset 0
+        -rotation 0
+        -flipX 0
+        -flipY 0
+        -useAlpha 1
+        -font "tinyBoldLabelFont" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0 0 0 0.5 
+        -image "nClothCreate.png" 
+        -image1 "nClothCreate.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "doCreateNCloth 0" 
+        -sourceType "mel" 
+        -doubleClickCommand "nClothCreateOptions" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -flexibleWidthType 3
+        -flexibleWidthValue 32
+        -enable 1
+        -width 35
+        -height 34
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "Select one or more polygon meshes to act as colliders for nCloth, nParticles, or nHair objects." 
+        -enableBackground 0
+        -backgroundColor 0 0 0 
+        -highlightColor 0.321569 0.521569 0.65098 
+        -align "center" 
+        -label "Create Passive" 
+        -labelOffset 0
+        -rotation 0
+        -flipX 0
+        -flipY 0
+        -useAlpha 1
+        -font "tinyBoldLabelFont" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0 0 0 0.5 
+        -image "nClothCreatePassive.png" 
+        -image1 "nClothCreatePassive.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "makeCollideNCloth" 
+        -sourceType "mel" 
+        -doubleClickCommand "nClothMakeCollideOptions" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -flexibleWidthType 3
+        -flexibleWidthValue 32
+        -enable 1
+        -width 35
+        -height 34
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "Revert the selected nCloth or passive collider to a regular mesh." 
+        -enableBackground 0
+        -backgroundColor 0 0 0 
+        -highlightColor 0.321569 0.521569 0.65098 
+        -align "center" 
+        -label "Remove nCloth" 
+        -labelOffset 0
+        -rotation 0
+        -flipX 0
+        -flipY 0
+        -useAlpha 1
+        -font "tinyBoldLabelFont" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0 0 0 0.5 
+        -image "nClothRemove.png" 
+        -image1 "nClothRemove.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "removeNCloth \"selected\"" 
+        -sourceType "mel" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -flexibleWidthType 3
+        -flexibleWidthValue 32
+        -enable 1
+        -width 35
+        -height 34
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "Display the input mesh" 
+        -enableBackground 0
+        -backgroundColor 0 0 0 
+        -highlightColor 0.321569 0.521569 0.65098 
+        -align "center" 
+        -label "Display Input Mesh" 
+        -labelOffset 0
+        -rotation 0
+        -flipX 0
+        -flipY 0
+        -useAlpha 1
+        -font "tinyBoldLabelFont" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0 0 0 0.5 
+        -image "nClothDisplayInput.png" 
+        -image1 "nClothDisplayInput.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "displayNClothMesh \"input\"" 
+        -sourceType "mel" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -flexibleWidthType 3
+        -flexibleWidthValue 32
+        -enable 1
+        -width 35
+        -height 34
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "Display the current mesh" 
+        -enableBackground 0
+        -backgroundColor 0 0 0 
+        -highlightColor 0.321569 0.521569 0.65098 
+        -align "center" 
+        -label "Display Current Mesh" 
+        -labelOffset 0
+        -rotation 0
+        -flipX 0
+        -flipY 0
+        -useAlpha 1
+        -font "tinyBoldLabelFont" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0 0 0 0.5 
+        -image "nClothDisplayCurrent.png" 
+        -image1 "nClothDisplayCurrent.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "displayNClothMesh \"current\"" 
+        -sourceType "mel" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    separator
+        -enable 1
+        -width 12
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -enableBackground 0
+        -backgroundColor 0 0 0 
+        -highlightColor 0.321569 0.521569 0.65098 
+        -style "shelf" 
+        -horizontal 0
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -flexibleWidthType 3
+        -flexibleWidthValue 32
+        -enable 1
+        -width 35
+        -height 34
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "Start Interactive playback." 
+        -enableBackground 0
+        -backgroundColor 0 0 0 
+        -highlightColor 0.321569 0.521569 0.65098 
+        -align "center" 
+        -label "Interactive playback" 
+        -labelOffset 0
+        -rotation 0
+        -flipX 0
+        -flipY 0
+        -useAlpha 1
+        -font "tinyBoldLabelFont" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0 0 0 0.5 
+        -image "interactivePlayback.png" 
+        -image1 "interactivePlayback.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "InteractivePlayback" 
+        -sourceType "mel" 
         -commandRepeatable 1
         -flat 1
     ;
