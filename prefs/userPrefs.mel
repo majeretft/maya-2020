@@ -6,11 +6,11 @@ animDisplay -refAnimCurvesEditable false;
 optionVar -fv gridSpacing 5 -fv gridDivisions 5 -fv gridSize 12 -intValue displayGridAxes 1 -intValue displayGridLines 1 -intValue displayDivisionLines 1 -intValue displayGridPerspLabels 0 -intValue displayGridOrthoLabels 0 -intValue displayGridAxesAccented 1 -stringValue displayGridPerspLabelPosition axis -stringValue displayGridOrthoLabelPosition edge;
 nurbsToPolygonsPref -f 0 -ucr 0 -chr 0.9 -uch 0 -cht 0.2 -d 0.1 -es 0 -ft 0.01 -mel 0.001 -pc 500 -pt 1 -m 0 -mt 0.1 -mrt 0 -un 3 -ut 1 -vn 3 -vt 1 ;
 nurbsCurveRebuildPref -fr 0 -rt 6 -d 3 -s 1 -tol 0.01 -end 1 -kr 1 -kep 1 -kt 0 -kcp 0 -scr 0;
-constructionHistory -tgl off;
+constructionHistory -tgl on;
 
 optionVar -version 3;
 optionVar
- -sv "" "C:/Users/Majer/OneDrive/Документы/maya/projects/"
+ -sv "" "C:/Users/Majer/OneDrive/пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ/maya/projects/"
  -iv "AEpopupWhenCreatingShaders" 1
  -sv "ASS ExportOptions" ""
  -sv "ASSOptions" ""
@@ -51,7 +51,7 @@ optionVar
  -ca "CustomFileDialogSidebarUrls"
  -sva "CustomFileDialogSidebarUrls" "file:"
  -sva "CustomFileDialogSidebarUrls" "C:/Users/Majer/Desktop"
- -sva "CustomFileDialogSidebarUrls" "C:/Users/Majer/OneDrive/Документы"
+ -sva "CustomFileDialogSidebarUrls" "C:/Users/Majer/OneDrive/пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ"
  -sva "CustomFileDialogSidebarUrls" "C:/Users/Majer"
  -sv "DAE_FBX exportOptions" "dae"
  -sv "DAE_FBXOptions" "dae"
@@ -215,8 +215,8 @@ optionVar
  -sva "RecentFilesList" "D:/Learn/Skillbox/Autodesk Maya 2.0/12/HW-12/scenes/pillar.mb"
  -sva "RecentFilesList" "D:/Learn/Skillbox/Autodesk Maya 2.0/12/HW-12/scenes/pillar.ma"
  -sva "RecentFilesList" "D:/Learn/Skillbox/Autodesk Maya 2.0/11/HW_11_Lizard.mb"
- -sva "RecentFilesList" "D:/Learn/Skillbox/Autodesk Maya 2.0/13/Arnold Render info/ПЗ 2/Доп задание/Room_user-guide.ma"
- -sva "RecentFilesList" "D:/Learn/Skillbox/Autodesk Maya 2.0/13/Arnold Render info/ПЗ 2/Доп задание/model-village-user-guide.ma"
+ -sva "RecentFilesList" "D:/Learn/Skillbox/Autodesk Maya 2.0/13/Arnold Render info/пїЅпїЅ 2/пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ/Room_user-guide.ma"
+ -sva "RecentFilesList" "D:/Learn/Skillbox/Autodesk Maya 2.0/13/Arnold Render info/пїЅпїЅ 2/пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ/model-village-user-guide.ma"
  -sva "RecentFilesList" "D:/Learn/Skillbox/Autodesk Maya 2.0/13/DOOR.ma"
  -sva "RecentFilesList" "D:/Learn/Skillbox/Autodesk Maya 2.0/13/HW-13/scenes/dungeon entry.mb"
  -sva "RecentFilesList" "D:/Learn/Skillbox/Autodesk Maya 2.0/13/HW-13/scenes/pillar.mb"
@@ -1074,14 +1074,14 @@ optionVar
  -sv "hyperShadeTab8Label" "Bake Sets"
  -sv "hyperShadeTab8Type" "scene"
  -iv "hyperShadeTab9" 1
- -sv "hyperShadeTab9CurrentDirectory" "C:/Users/Majer/OneDrive/Документы/maya/projects/"
+ -sv "hyperShadeTab9CurrentDirectory" "C:/Users/Majer/OneDrive/пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ/maya/projects/"
  -iv "hyperShadeTab9DirectoriesShown" 1;
 optionVar
  -sv "hyperShadeTab9DirectoriesVisorName" "directories1VisorEd"
  -iv "hyperShadeTab9FilesShown" 1
  -sv "hyperShadeTab9FilesVisorName" "files1VisorEd"
  -sv "hyperShadeTab9Label" "Projects"
- -sv "hyperShadeTab9RootDirectory" "C:/Users/Majer/OneDrive/Документы/maya/projects/"
+ -sv "hyperShadeTab9RootDirectory" "C:/Users/Majer/OneDrive/пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ/maya/projects/"
  -sv "hyperShadeTab9Type" "disk"
  -iv "hyperShadeWorkAreaProportion" 100
  -iv "hypershadeSwatchPauseButtonState" 0
@@ -1999,9 +1999,9 @@ optionVar
  -iv "removeDuplicateShadingNetworksOnImport" 0
  -iv "renderLayerMerge" 0
  -iv "renderSetupEnable" 1
- -sv "renderSetup_userPresetsDirectory" "C:/Users/Majer/OneDrive/Документы/maya\\Presets"
+ -sv "renderSetup_userPresetsDirectory" "C:/Users/Majer/OneDrive/пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ/maya\\Presets"
  -sv "renderSetup_userPresetsDirectory_contents" "C:/Program Files/Autodesk/Maya2020\\presets\\Presets"
- -sv "renderSetup_userTemplateDirectory" "C:/Users/Majer/OneDrive/Документы/maya\\RSTemplates"
+ -sv "renderSetup_userTemplateDirectory" "C:/Users/Majer/OneDrive/пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ/maya\\RSTemplates"
  -sv "renderSetup_userTemplateDirectory_contents" "C:/Program Files/Autodesk/Maya2020\\presets\\RSTemplates"
  -iv "renderViewAutoRenderRegion" 0
  -iv "renderViewAutoResize" 1;
