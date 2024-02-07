@@ -9,8 +9,8 @@ global proc shelf_Polygons () {
         -flexibleWidthType 3
         -flexibleWidthValue 32
         -enable 1
-        -width 35
-        -height 34
+        -width 33
+        -height 32
         -manage 1
         -visible 1
         -preventOverride 0
@@ -25,7 +25,6 @@ global proc shelf_Polygons () {
         -flipX 0
         -flipY 0
         -useAlpha 1
-        -font "plainLabelFont" 
         -overlayLabelColor 0.8 0.8 0.8 
         -overlayLabelBackColor 0 0 0 0.5 
         -image "polySphere.png" 
@@ -44,8 +43,8 @@ global proc shelf_Polygons () {
         -flexibleWidthType 3
         -flexibleWidthValue 32
         -enable 1
-        -width 35
-        -height 34
+        -width 33
+        -height 32
         -manage 1
         -visible 1
         -preventOverride 0
@@ -60,7 +59,6 @@ global proc shelf_Polygons () {
         -flipX 0
         -flipY 0
         -useAlpha 1
-        -font "plainLabelFont" 
         -overlayLabelColor 0.8 0.8 0.8 
         -overlayLabelBackColor 0 0 0 0.5 
         -image "polyCube.png" 
@@ -79,8 +77,8 @@ global proc shelf_Polygons () {
         -flexibleWidthType 3
         -flexibleWidthValue 32
         -enable 1
-        -width 35
-        -height 34
+        -width 33
+        -height 32
         -manage 1
         -visible 1
         -preventOverride 0
@@ -95,7 +93,6 @@ global proc shelf_Polygons () {
         -flipX 0
         -flipY 0
         -useAlpha 1
-        -font "plainLabelFont" 
         -overlayLabelColor 0.8 0.8 0.8 
         -overlayLabelBackColor 0 0 0 0.5 
         -image "polyCylinder.png" 
@@ -114,8 +111,8 @@ global proc shelf_Polygons () {
         -flexibleWidthType 3
         -flexibleWidthValue 32
         -enable 1
-        -width 35
-        -height 34
+        -width 33
+        -height 32
         -manage 1
         -visible 1
         -preventOverride 0
@@ -130,7 +127,6 @@ global proc shelf_Polygons () {
         -flipX 0
         -flipY 0
         -useAlpha 1
-        -font "plainLabelFont" 
         -overlayLabelColor 0.8 0.8 0.8 
         -overlayLabelBackColor 0 0 0 0.5 
         -image "polyCone.png" 
@@ -149,8 +145,8 @@ global proc shelf_Polygons () {
         -flexibleWidthType 3
         -flexibleWidthValue 32
         -enable 1
-        -width 35
-        -height 34
+        -width 33
+        -height 32
         -manage 1
         -visible 1
         -preventOverride 0
@@ -165,7 +161,6 @@ global proc shelf_Polygons () {
         -flipX 0
         -flipY 0
         -useAlpha 1
-        -font "plainLabelFont" 
         -overlayLabelColor 0.8 0.8 0.8 
         -overlayLabelBackColor 0 0 0 0.5 
         -image "polyTorus.png" 
@@ -184,8 +179,8 @@ global proc shelf_Polygons () {
         -flexibleWidthType 3
         -flexibleWidthValue 32
         -enable 1
-        -width 35
-        -height 34
+        -width 33
+        -height 32
         -manage 1
         -visible 1
         -preventOverride 0
@@ -200,7 +195,6 @@ global proc shelf_Polygons () {
         -flipX 0
         -flipY 0
         -useAlpha 1
-        -font "plainLabelFont" 
         -overlayLabelColor 0.8 0.8 0.8 
         -overlayLabelBackColor 0 0 0 0.5 
         -image "polyMesh.png" 
@@ -219,8 +213,8 @@ global proc shelf_Polygons () {
         -flexibleWidthType 3
         -flexibleWidthValue 32
         -enable 1
-        -width 35
-        -height 34
+        -width 33
+        -height 32
         -manage 1
         -visible 1
         -preventOverride 0
@@ -235,7 +229,6 @@ global proc shelf_Polygons () {
         -flipX 0
         -flipY 0
         -useAlpha 1
-        -font "plainLabelFont" 
         -overlayLabelColor 0.8 0.8 0.8 
         -overlayLabelBackColor 0 0 0 0.5 
         -image "polyDisc.png" 
@@ -253,7 +246,7 @@ global proc shelf_Polygons () {
     separator
         -enable 1
         -width 12
-        -height 35
+        -height 33
         -manage 1
         -visible 1
         -preventOverride 0
@@ -268,8 +261,8 @@ global proc shelf_Polygons () {
         -flexibleWidthType 3
         -flexibleWidthValue 32
         -enable 1
-        -width 35
-        -height 34
+        -width 33
+        -height 32
         -manage 1
         -visible 1
         -preventOverride 0
@@ -284,7 +277,6 @@ global proc shelf_Polygons () {
         -flipX 0
         -flipY 0
         -useAlpha 1
-        -font "plainLabelFont" 
         -overlayLabelColor 0.8 0.8 0.8 
         -overlayLabelBackColor 0 0 0 0.5 
         -image "polyPlatonicSolid.png" 
@@ -308,7 +300,7 @@ global proc shelf_Polygons () {
     separator
         -enable 1
         -width 12
-        -height 35
+        -height 33
         -manage 1
         -visible 1
         -preventOverride 0
@@ -323,8 +315,8 @@ global proc shelf_Polygons () {
         -flexibleWidthType 3
         -flexibleWidthValue 32
         -enable 1
-        -width 35
-        -height 34
+        -width 33
+        -height 32
         -manage 1
         -visible 1
         -preventOverride 0
@@ -339,7 +331,6 @@ global proc shelf_Polygons () {
         -flipX 0
         -flipY 0
         -useAlpha 1
-        -font "plainLabelFont" 
         -overlayLabelColor 0.8 0.8 0.8 
         -overlayLabelBackColor 0 0 0 0.5 
         -image "polySuperEllipse.png" 
@@ -362,8 +353,8 @@ global proc shelf_Polygons () {
         -flexibleWidthType 3
         -flexibleWidthValue 32
         -enable 1
-        -width 35
-        -height 34
+        -width 33
+        -height 32
         -manage 1
         -visible 1
         -preventOverride 0
@@ -378,7 +369,6 @@ global proc shelf_Polygons () {
         -flipX 0
         -flipY 0
         -useAlpha 1
-        -font "plainLabelFont" 
         -overlayLabelColor 0.8 0.8 0.8 
         -overlayLabelBackColor 0 0 0 0.5 
         -image "polyType.png" 
@@ -397,8 +387,8 @@ global proc shelf_Polygons () {
         -flexibleWidthType 3
         -flexibleWidthValue 32
         -enable 1
-        -width 35
-        -height 34
+        -width 33
+        -height 32
         -manage 1
         -visible 1
         -preventOverride 0
@@ -413,7 +403,6 @@ global proc shelf_Polygons () {
         -flipX 0
         -flipY 0
         -useAlpha 1
-        -font "plainLabelFont" 
         -overlayLabelColor 0.8 0.8 0.8 
         -overlayLabelBackColor 0 0 0 0.5 
         -image "polySVG.png" 
@@ -430,7 +419,7 @@ global proc shelf_Polygons () {
     separator
         -enable 1
         -width 12
-        -height 35
+        -height 33
         -manage 1
         -visible 1
         -preventOverride 0
@@ -445,8 +434,8 @@ global proc shelf_Polygons () {
         -flexibleWidthType 3
         -flexibleWidthValue 32
         -enable 1
-        -width 35
-        -height 34
+        -width 33
+        -height 32
         -manage 1
         -visible 1
         -preventOverride 0
@@ -461,7 +450,6 @@ global proc shelf_Polygons () {
         -flipX 0
         -flipY 0
         -useAlpha 1
-        -font "plainLabelFont" 
         -overlayLabelColor 0.8 0.8 0.8 
         -overlayLabelBackColor 0 0 0 0.5 
         -image "CenterPivot.png" 
@@ -479,8 +467,8 @@ global proc shelf_Polygons () {
         -flexibleWidthType 3
         -flexibleWidthValue 32
         -enable 1
-        -width 35
-        -height 34
+        -width 33
+        -height 32
         -manage 1
         -visible 1
         -preventOverride 0
@@ -495,7 +483,6 @@ global proc shelf_Polygons () {
         -flipX 0
         -flipY 0
         -useAlpha 1
-        -font "plainLabelFont" 
         -overlayLabelColor 0.8 0.8 0.8 
         -overlayLabelBackColor 0 0 0 0.5 
         -image "DeleteHistory.png" 
@@ -513,8 +500,8 @@ global proc shelf_Polygons () {
         -flexibleWidthType 3
         -flexibleWidthValue 32
         -enable 1
-        -width 35
-        -height 34
+        -width 33
+        -height 32
         -manage 1
         -visible 1
         -preventOverride 0
@@ -529,7 +516,6 @@ global proc shelf_Polygons () {
         -flipX 0
         -flipY 0
         -useAlpha 1
-        -font "plainLabelFont" 
         -overlayLabelColor 0.8 0.8 0.8 
         -overlayLabelBackColor 0 0 0 0.5 
         -image "FreezeTransform.png" 
@@ -545,7 +531,7 @@ global proc shelf_Polygons () {
     separator
         -enable 1
         -width 12
-        -height 35
+        -height 33
         -manage 1
         -visible 1
         -preventOverride 0
@@ -560,8 +546,8 @@ global proc shelf_Polygons () {
         -flexibleWidthType 3
         -flexibleWidthValue 32
         -enable 1
-        -width 35
-        -height 34
+        -width 33
+        -height 32
         -manage 1
         -visible 1
         -preventOverride 0
@@ -576,7 +562,6 @@ global proc shelf_Polygons () {
         -flipX 0
         -flipY 0
         -useAlpha 1
-        -font "plainLabelFont" 
         -overlayLabelColor 0.8 0.8 0.8 
         -overlayLabelBackColor 0 0 0 0.5 
         -image "polyUnite.png" 
@@ -595,8 +580,8 @@ global proc shelf_Polygons () {
         -flexibleWidthType 3
         -flexibleWidthValue 32
         -enable 1
-        -width 35
-        -height 34
+        -width 33
+        -height 32
         -manage 1
         -visible 1
         -preventOverride 0
@@ -611,7 +596,6 @@ global proc shelf_Polygons () {
         -flipX 0
         -flipY 0
         -useAlpha 1
-        -font "plainLabelFont" 
         -overlayLabelColor 0.8 0.8 0.8 
         -overlayLabelBackColor 0 0 0 0.5 
         -image "polyChipOff.png" 
@@ -630,8 +614,8 @@ global proc shelf_Polygons () {
         -flexibleWidthType 3
         -flexibleWidthValue 32
         -enable 1
-        -width 35
-        -height 34
+        -width 33
+        -height 32
         -manage 1
         -visible 1
         -preventOverride 0
@@ -646,7 +630,6 @@ global proc shelf_Polygons () {
         -flipX 0
         -flipY 0
         -useAlpha 1
-        -font "plainLabelFont" 
         -overlayLabelColor 0.8 0.8 0.8 
         -overlayLabelBackColor 0 0 0 0.5 
         -image "polyMirrorGeometry.png" 
@@ -666,8 +649,8 @@ global proc shelf_Polygons () {
         -flexibleWidthType 3
         -flexibleWidthValue 32
         -enable 1
-        -width 35
-        -height 34
+        -width 33
+        -height 32
         -manage 1
         -visible 1
         -preventOverride 0
@@ -682,7 +665,6 @@ global proc shelf_Polygons () {
         -flipX 0
         -flipY 0
         -useAlpha 1
-        -font "plainLabelFont" 
         -overlayLabelColor 0.8 0.8 0.8 
         -overlayLabelBackColor 0 0 0 0.5 
         -image "polySmooth.png" 
@@ -701,8 +683,8 @@ global proc shelf_Polygons () {
         -flexibleWidthType 3
         -flexibleWidthValue 32
         -enable 1
-        -width 35
-        -height 34
+        -width 33
+        -height 32
         -manage 1
         -visible 1
         -preventOverride 0
@@ -717,7 +699,6 @@ global proc shelf_Polygons () {
         -flipX 0
         -flipY 0
         -useAlpha 1
-        -font "plainLabelFont" 
         -overlayLabelColor 0.8 0.8 0.8 
         -overlayLabelBackColor 0 0 0 0.5 
         -image "polyReduce.png" 
@@ -737,8 +718,8 @@ global proc shelf_Polygons () {
         -flexibleWidthType 3
         -flexibleWidthValue 32
         -enable 1
-        -width 35
-        -height 34
+        -width 33
+        -height 32
         -manage 1
         -visible 1
         -preventOverride 0
@@ -753,7 +734,6 @@ global proc shelf_Polygons () {
         -flipX 0
         -flipY 0
         -useAlpha 1
-        -font "plainLabelFont" 
         -overlayLabelColor 0.8 0.8 0.8 
         -overlayLabelBackColor 0 0 0 0.5 
         -image "polyRemesh.png" 
@@ -773,8 +753,8 @@ global proc shelf_Polygons () {
         -flexibleWidthType 3
         -flexibleWidthValue 32
         -enable 1
-        -width 35
-        -height 34
+        -width 33
+        -height 32
         -manage 1
         -visible 1
         -preventOverride 0
@@ -789,7 +769,6 @@ global proc shelf_Polygons () {
         -flipX 0
         -flipY 0
         -useAlpha 1
-        -font "plainLabelFont" 
         -overlayLabelColor 0.8 0.8 0.8 
         -overlayLabelBackColor 0 0 0 0.5 
         -image "polyRetopo.png" 
@@ -807,7 +786,7 @@ global proc shelf_Polygons () {
     separator
         -enable 1
         -width 12
-        -height 35
+        -height 33
         -manage 1
         -visible 1
         -preventOverride 0
@@ -822,8 +801,8 @@ global proc shelf_Polygons () {
         -flexibleWidthType 3
         -flexibleWidthValue 32
         -enable 1
-        -width 35
-        -height 34
+        -width 33
+        -height 32
         -manage 1
         -visible 1
         -preventOverride 0
@@ -838,7 +817,6 @@ global proc shelf_Polygons () {
         -flipX 0
         -flipY 0
         -useAlpha 1
-        -font "plainLabelFont" 
         -overlayLabelColor 0.8 0.8 0.8 
         -overlayLabelBackColor 0 0 0 0.5 
         -image "polyExtrudeFacet.png" 
@@ -857,8 +835,8 @@ global proc shelf_Polygons () {
         -flexibleWidthType 3
         -flexibleWidthValue 32
         -enable 1
-        -width 35
-        -height 34
+        -width 33
+        -height 32
         -manage 1
         -visible 1
         -preventOverride 0
@@ -873,7 +851,6 @@ global proc shelf_Polygons () {
         -flipX 0
         -flipY 0
         -useAlpha 1
-        -font "plainLabelFont" 
         -overlayLabelColor 0.8 0.8 0.8 
         -overlayLabelBackColor 0 0 0 0.5 
         -image "polyBridge.png" 
@@ -892,8 +869,8 @@ global proc shelf_Polygons () {
         -flexibleWidthType 3
         -flexibleWidthValue 32
         -enable 1
-        -width 35
-        -height 34
+        -width 33
+        -height 32
         -manage 1
         -visible 1
         -preventOverride 0
@@ -908,7 +885,6 @@ global proc shelf_Polygons () {
         -flipX 0
         -flipY 0
         -useAlpha 1
-        -font "plainLabelFont" 
         -overlayLabelColor 0.8 0.8 0.8 
         -overlayLabelBackColor 0 0 0 0.5 
         -image "polyBevel.png" 
@@ -927,8 +903,8 @@ global proc shelf_Polygons () {
         -flexibleWidthType 3
         -flexibleWidthValue 32
         -enable 1
-        -width 35
-        -height 34
+        -width 33
+        -height 32
         -manage 1
         -visible 1
         -preventOverride 0
@@ -943,7 +919,6 @@ global proc shelf_Polygons () {
         -flipX 0
         -flipY 0
         -useAlpha 1
-        -font "plainLabelFont" 
         -overlayLabelColor 0.8 0.8 0.8 
         -overlayLabelBackColor 0 0 0 0.5 
         -image "polyMerge.png" 
@@ -962,8 +937,8 @@ global proc shelf_Polygons () {
         -flexibleWidthType 3
         -flexibleWidthValue 32
         -enable 1
-        -width 35
-        -height 34
+        -width 33
+        -height 32
         -manage 1
         -visible 1
         -preventOverride 0
@@ -978,7 +953,6 @@ global proc shelf_Polygons () {
         -flipX 0
         -flipY 0
         -useAlpha 1
-        -font "plainLabelFont" 
         -overlayLabelColor 0.8 0.8 0.8 
         -overlayLabelBackColor 0 0 0 0.5 
         -image "polyMergeToCenter.png" 
@@ -996,8 +970,8 @@ global proc shelf_Polygons () {
         -flexibleWidthType 3
         -flexibleWidthValue 32
         -enable 1
-        -width 35
-        -height 34
+        -width 33
+        -height 32
         -manage 1
         -visible 1
         -preventOverride 0
@@ -1012,7 +986,6 @@ global proc shelf_Polygons () {
         -flipX 0
         -flipY 0
         -useAlpha 1
-        -font "plainLabelFont" 
         -overlayLabelColor 0.8 0.8 0.8 
         -overlayLabelBackColor 0 0 0 0.5 
         -image "polyFlipEdge.png" 
@@ -1030,8 +1003,8 @@ global proc shelf_Polygons () {
         -flexibleWidthType 3
         -flexibleWidthValue 32
         -enable 1
-        -width 35
-        -height 34
+        -width 33
+        -height 32
         -manage 1
         -visible 1
         -preventOverride 0
@@ -1046,7 +1019,6 @@ global proc shelf_Polygons () {
         -flipX 0
         -flipY 0
         -useAlpha 1
-        -font "plainLabelFont" 
         -overlayLabelColor 0.8 0.8 0.8 
         -overlayLabelBackColor 0 0 0 0.5 
         -image "polyDuplicateFacet.png" 
@@ -1065,8 +1037,8 @@ global proc shelf_Polygons () {
         -flexibleWidthType 3
         -flexibleWidthValue 32
         -enable 1
-        -width 35
-        -height 34
+        -width 33
+        -height 32
         -manage 1
         -visible 1
         -preventOverride 0
@@ -1081,7 +1053,6 @@ global proc shelf_Polygons () {
         -flipX 0
         -flipY 0
         -useAlpha 1
-        -font "plainLabelFont" 
         -overlayLabelColor 0.8 0.8 0.8 
         -overlayLabelBackColor 0 0 0 0.5 
         -image "polyCollapseEdge.png" 
@@ -1099,8 +1070,8 @@ global proc shelf_Polygons () {
         -flexibleWidthType 3
         -flexibleWidthValue 32
         -enable 1
-        -width 35
-        -height 34
+        -width 33
+        -height 32
         -manage 1
         -visible 1
         -preventOverride 0
@@ -1115,7 +1086,6 @@ global proc shelf_Polygons () {
         -flipX 0
         -flipY 0
         -useAlpha 1
-        -font "plainLabelFont" 
         -overlayLabelColor 0.8 0.8 0.8 
         -overlayLabelBackColor 0 0 0 0.5 
         -image "polyCircularize.png" 
@@ -1133,7 +1103,7 @@ global proc shelf_Polygons () {
     separator
         -enable 1
         -width 12
-        -height 35
+        -height 33
         -manage 1
         -visible 1
         -preventOverride 0
@@ -1148,8 +1118,8 @@ global proc shelf_Polygons () {
         -flexibleWidthType 3
         -flexibleWidthValue 32
         -enable 1
-        -width 35
-        -height 34
+        -width 33
+        -height 32
         -manage 1
         -visible 1
         -preventOverride 0
@@ -1164,7 +1134,6 @@ global proc shelf_Polygons () {
         -flipX 0
         -flipY 0
         -useAlpha 1
-        -font "plainLabelFont" 
         -overlayLabelColor 0.8 0.8 0.8 
         -overlayLabelBackColor 0 0 0 0.5 
         -image "multiCut_NEX32.png" 
@@ -1184,8 +1153,8 @@ global proc shelf_Polygons () {
         -flexibleWidthType 3
         -flexibleWidthValue 32
         -enable 1
-        -width 35
-        -height 34
+        -width 33
+        -height 32
         -manage 1
         -visible 1
         -preventOverride 0
@@ -1200,7 +1169,6 @@ global proc shelf_Polygons () {
         -flipX 0
         -flipY 0
         -useAlpha 1
-        -font "plainLabelFont" 
         -overlayLabelColor 0.8 0.8 0.8 
         -overlayLabelBackColor 0 0 0 0.5 
         -image "weld_NEX32.png" 
@@ -1219,8 +1187,8 @@ global proc shelf_Polygons () {
         -flexibleWidthType 3
         -flexibleWidthValue 32
         -enable 1
-        -width 35
-        -height 34
+        -width 33
+        -height 32
         -manage 1
         -visible 1
         -preventOverride 0
@@ -1235,7 +1203,6 @@ global proc shelf_Polygons () {
         -flipX 0
         -flipY 0
         -useAlpha 1
-        -font "plainLabelFont" 
         -overlayLabelColor 0.8 0.8 0.8 
         -overlayLabelBackColor 0 0 0 0.5 
         -image "quadDraw_NEX32.png" 
@@ -1252,7 +1219,7 @@ global proc shelf_Polygons () {
     separator
         -enable 1
         -width 12
-        -height 35
+        -height 33
         -manage 1
         -visible 1
         -preventOverride 0
@@ -1267,8 +1234,8 @@ global proc shelf_Polygons () {
         -flexibleWidthType 3
         -flexibleWidthValue 32
         -enable 1
-        -width 35
-        -height 34
+        -width 33
+        -height 32
         -manage 1
         -visible 1
         -preventOverride 0
@@ -1283,7 +1250,6 @@ global proc shelf_Polygons () {
         -flipX 0
         -flipY 0
         -useAlpha 1
-        -font "plainLabelFont" 
         -overlayLabelColor 0.8 0.8 0.8 
         -overlayLabelBackColor 0 0 0 0.5 
         -image "polyPlanProjLarge.png" 
@@ -1301,8 +1267,8 @@ global proc shelf_Polygons () {
         -flexibleWidthType 3
         -flexibleWidthValue 32
         -enable 1
-        -width 35
-        -height 34
+        -width 33
+        -height 32
         -manage 1
         -visible 1
         -preventOverride 0
@@ -1317,7 +1283,6 @@ global proc shelf_Polygons () {
         -flipX 0
         -flipY 0
         -useAlpha 1
-        -font "plainLabelFont" 
         -overlayLabelColor 0.8 0.8 0.8 
         -overlayLabelBackColor 0 0 0 0.5 
         -image "polyCylProjLarge.png" 
@@ -1335,8 +1300,8 @@ global proc shelf_Polygons () {
         -flexibleWidthType 3
         -flexibleWidthValue 32
         -enable 1
-        -width 35
-        -height 34
+        -width 33
+        -height 32
         -manage 1
         -visible 1
         -preventOverride 0
@@ -1351,7 +1316,6 @@ global proc shelf_Polygons () {
         -flipX 0
         -flipY 0
         -useAlpha 1
-        -font "plainLabelFont" 
         -overlayLabelColor 0.8 0.8 0.8 
         -overlayLabelBackColor 0 0 0 0.5 
         -image "polySphereProjLarge.png" 
@@ -1369,8 +1333,8 @@ global proc shelf_Polygons () {
         -flexibleWidthType 3
         -flexibleWidthValue 32
         -enable 1
-        -width 35
-        -height 34
+        -width 33
+        -height 32
         -manage 1
         -visible 1
         -preventOverride 0
@@ -1385,7 +1349,6 @@ global proc shelf_Polygons () {
         -flipX 0
         -flipY 0
         -useAlpha 1
-        -font "plainLabelFont" 
         -overlayLabelColor 0.8 0.8 0.8 
         -overlayLabelBackColor 0 0 0 0.5 
         -image "polyAutoProjLarge.png" 
@@ -1403,8 +1366,8 @@ global proc shelf_Polygons () {
         -flexibleWidthType 3
         -flexibleWidthValue 32
         -enable 1
-        -width 35
-        -height 34
+        -width 33
+        -height 32
         -manage 1
         -visible 1
         -preventOverride 0
@@ -1419,7 +1382,6 @@ global proc shelf_Polygons () {
         -flipX 0
         -flipY 0
         -useAlpha 1
-        -font "plainLabelFont" 
         -overlayLabelColor 0.8 0.8 0.8 
         -overlayLabelBackColor 0 0 0 0.5 
         -image "polyContourProjLarge.png" 
@@ -1438,8 +1400,8 @@ global proc shelf_Polygons () {
         -flexibleWidthType 3
         -flexibleWidthValue 32
         -enable 1
-        -width 35
-        -height 34
+        -width 33
+        -height 32
         -manage 1
         -visible 1
         -preventOverride 0
@@ -1454,7 +1416,6 @@ global proc shelf_Polygons () {
         -flipX 0
         -flipY 0
         -useAlpha 1
-        -font "plainLabelFont" 
         -overlayLabelColor 0.8 0.8 0.8 
         -overlayLabelBackColor 0 0 0 0.5 
         -image "textureEditor.png" 
@@ -1473,8 +1434,8 @@ global proc shelf_Polygons () {
         -flexibleWidthType 3
         -flexibleWidthValue 32
         -enable 1
-        -width 35
-        -height 34
+        -width 33
+        -height 32
         -manage 1
         -visible 1
         -preventOverride 0
@@ -1489,7 +1450,6 @@ global proc shelf_Polygons () {
         -flipX 0
         -flipY 0
         -useAlpha 1
-        -font "plainLabelFont" 
         -overlayLabelColor 0.8 0.8 0.8 
         -overlayLabelBackColor 0 0 0 0.5 
         -image "UV_3D_Grab_Brush.png" 
@@ -1509,8 +1469,8 @@ global proc shelf_Polygons () {
         -flexibleWidthType 3
         -flexibleWidthValue 32
         -enable 1
-        -width 35
-        -height 34
+        -width 33
+        -height 32
         -manage 1
         -visible 1
         -preventOverride 0
@@ -1525,7 +1485,6 @@ global proc shelf_Polygons () {
         -flipX 0
         -flipY 0
         -useAlpha 1
-        -font "plainLabelFont" 
         -overlayLabelColor 0.8 0.8 0.8 
         -overlayLabelBackColor 0 0 0 0.5 
         -image "CutSewUVTool.png" 
