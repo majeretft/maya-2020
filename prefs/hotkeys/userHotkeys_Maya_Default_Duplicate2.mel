@@ -5,7 +5,7 @@
 //
 // The hotkey set
 //
-hotkeySet -source "Maya_Default" -current Maya_Default_Duplicate;
+hotkeySet -source "Maya_Default" -current Maya_Default_Duplicate2;
 //
 // The hotkey contexts and hotkeys
 //

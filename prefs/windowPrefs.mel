@@ -19,6 +19,8 @@ windowPref -topLeftCorner 235 230 -widthHeight 1430 710 -maximized false -parent
 windowPref -topLeftCorner -8 -1 -widthHeight 1280 1024 -maximized true -parentMain false MayaWindow;
 windowPref -topLeftCorner 346 640 -widthHeight 450 320 -maximized false -parentMain true NewFeatureHighlightWnd;
 windowPref -topLeftCorner 346 640 -widthHeight 470 536 -maximized false -parentMain true shelfEditor;
-windowPref -topLeftCorner 346 640 -widthHeight 682 438 -maximized false -parentMain true OptionBoxWindow;
+windowPref -topLeftCorner 271 643 -widthHeight 546 685 -maximized false -parentMain true OptionBoxWindow;
 windowPref -topLeftCorner 136 330 -widthHeight 1332 700 -maximized false -parentMain true HotkeyEditor;
 windowPref -topLeftCorner 210 390 -widthHeight 907 610 -maximized false -parentMain true PreferencesWindow;
+windowPref -topLeftCorner 344 640 -widthHeight 358 199 -maximized false -parentMain true LayerEditorQuickEditWindow;
+windowPref -topLeftCorner 344 640 -widthHeight 500 500 -maximized false -parentMain true FbxWarningWindow;

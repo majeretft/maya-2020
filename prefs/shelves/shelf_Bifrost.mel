@@ -9,8 +9,8 @@ global proc shelf_Bifrost () {
         -flexibleWidthType 3
         -flexibleWidthValue 32
         -enable 1
-        -width 33
-        -height 32
+        -width 35
+        -height 34
         -manage 1
         -visible 1
         -preventOverride 0
@@ -25,6 +25,7 @@ global proc shelf_Bifrost () {
         -flipX 0
         -flipY 0
         -useAlpha 1
+        -font "plainLabelFont" 
         -overlayLabelColor 0.8 0.8 0.8 
         -overlayLabelBackColor 0 0 0 0.5 
         -image "createLiquid.png" 
@@ -42,8 +43,8 @@ global proc shelf_Bifrost () {
         -flexibleWidthType 3
         -flexibleWidthValue 32
         -enable 1
-        -width 33
-        -height 32
+        -width 35
+        -height 34
         -manage 1
         -visible 1
         -preventOverride 0
@@ -58,6 +59,7 @@ global proc shelf_Bifrost () {
         -flipX 0
         -flipY 0
         -useAlpha 1
+        -font "plainLabelFont" 
         -overlayLabelColor 0.8 0.8 0.8 
         -overlayLabelBackColor 0 0 0 0.5 
         -image "createAero.png" 
@@ -75,8 +77,8 @@ global proc shelf_Bifrost () {
         -flexibleWidthType 3
         -flexibleWidthValue 32
         -enable 1
-        -width 33
-        -height 32
+        -width 35
+        -height 34
         -manage 1
         -visible 1
         -preventOverride 0
@@ -91,6 +93,7 @@ global proc shelf_Bifrost () {
         -flipX 0
         -flipY 0
         -useAlpha 1
+        -font "plainLabelFont" 
         -overlayLabelColor 0.8 0.8 0.8 
         -overlayLabelBackColor 0 0 0 0.5 
         -image "addEmitter.png" 
@@ -108,8 +111,8 @@ global proc shelf_Bifrost () {
         -flexibleWidthType 3
         -flexibleWidthValue 32
         -enable 1
-        -width 33
-        -height 32
+        -width 35
+        -height 34
         -manage 1
         -visible 1
         -preventOverride 0
@@ -124,6 +127,7 @@ global proc shelf_Bifrost () {
         -flipX 0
         -flipY 0
         -useAlpha 1
+        -font "plainLabelFont" 
         -overlayLabelColor 0.8 0.8 0.8 
         -overlayLabelBackColor 0 0 0 0.5 
         -image "addCollider.png" 
@@ -141,8 +145,8 @@ global proc shelf_Bifrost () {
         -flexibleWidthType 3
         -flexibleWidthValue 32
         -enable 1
-        -width 33
-        -height 32
+        -width 35
+        -height 34
         -manage 1
         -visible 1
         -preventOverride 0
@@ -157,6 +161,7 @@ global proc shelf_Bifrost () {
         -flipX 0
         -flipY 0
         -useAlpha 1
+        -font "plainLabelFont" 
         -overlayLabelColor 0.8 0.8 0.8 
         -overlayLabelBackColor 0 0 0 0.5 
         -image "addFoam.png" 
@@ -174,8 +179,8 @@ global proc shelf_Bifrost () {
         -flexibleWidthType 3
         -flexibleWidthValue 32
         -enable 1
-        -width 33
-        -height 32
+        -width 35
+        -height 34
         -manage 1
         -visible 1
         -preventOverride 0
@@ -190,6 +195,7 @@ global proc shelf_Bifrost () {
         -flipX 0
         -flipY 0
         -useAlpha 1
+        -font "plainLabelFont" 
         -overlayLabelColor 0.8 0.8 0.8 
         -overlayLabelBackColor 0 0 0 0.5 
         -image "addGuide.png" 
@@ -207,8 +213,8 @@ global proc shelf_Bifrost () {
         -flexibleWidthType 3
         -flexibleWidthValue 32
         -enable 1
-        -width 33
-        -height 32
+        -width 35
+        -height 34
         -manage 1
         -visible 1
         -preventOverride 0
@@ -223,6 +229,7 @@ global proc shelf_Bifrost () {
         -flipX 0
         -flipY 0
         -useAlpha 1
+        -font "plainLabelFont" 
         -overlayLabelColor 0.8 0.8 0.8 
         -overlayLabelBackColor 0 0 0 0.5 
         -image "addEmissionRegion.png" 
@@ -240,8 +247,8 @@ global proc shelf_Bifrost () {
         -flexibleWidthType 3
         -flexibleWidthValue 32
         -enable 1
-        -width 33
-        -height 32
+        -width 35
+        -height 34
         -manage 1
         -visible 1
         -preventOverride 0
@@ -256,6 +263,7 @@ global proc shelf_Bifrost () {
         -flipX 0
         -flipY 0
         -useAlpha 1
+        -font "plainLabelFont" 
         -overlayLabelColor 0.8 0.8 0.8 
         -overlayLabelBackColor 0 0 0 0.5 
         -image "addField.png" 
@@ -270,8 +278,8 @@ global proc shelf_Bifrost () {
     ;
     separator
         -enable 1
-        -width 32
-        -height 33
+        -width 34
+        -height 34
         -manage 1
         -visible 1
         -preventOverride 0
@@ -286,8 +294,8 @@ global proc shelf_Bifrost () {
         -flexibleWidthType 3
         -flexibleWidthValue 32
         -enable 1
-        -width 33
-        -height 32
+        -width 35
+        -height 34
         -manage 1
         -visible 1
         -preventOverride 0
@@ -302,6 +310,7 @@ global proc shelf_Bifrost () {
         -flipX 0
         -flipY 0
         -useAlpha 1
+        -font "plainLabelFont" 
         -overlayLabelColor 0.8 0.8 0.8 
         -overlayLabelBackColor 0 0 0 0.5 
         -image "BifrostGraph.png" 
@@ -320,8 +329,8 @@ global proc shelf_Bifrost () {
         -flexibleWidthType 3
         -flexibleWidthValue 32
         -enable 1
-        -width 33
-        -height 32
+        -width 35
+        -height 34
         -manage 1
         -visible 1
         -preventOverride 0
@@ -336,6 +345,7 @@ global proc shelf_Bifrost () {
         -flipX 0
         -flipY 0
         -useAlpha 1
+        -font "plainLabelFont" 
         -overlayLabelColor 0.8 0.8 0.8 
         -overlayLabelBackColor 0 0 0 0.5 
         -image "BifrostBrowser.png" 
