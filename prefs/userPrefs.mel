@@ -50,7 +50,7 @@ optionVar
  -ca "CustomFileDialogSidebarUrls"
  -sva "CustomFileDialogSidebarUrls" "file:"
  -sva "CustomFileDialogSidebarUrls" "C:/Users/Majer/Desktop"
- -sva "CustomFileDialogSidebarUrls" "C:/Users/Majer/OneDrive/Документы"
+ -sva "CustomFileDialogSidebarUrls" "C:/Users/Majer/OneDrive/пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ"
  -sva "CustomFileDialogSidebarUrls" "C:/Users/Majer"
  -sv "DAE_FBX exportOptions" "dae"
  -sv "DAE_FBXOptions" "dae"
@@ -652,7 +652,7 @@ optionVar
  -iv "fbikDetailsVisibility" 0
  -iv "fcheckAsImageViewer" 1
  -sv "fileCompressionMode" "asCompressed"
- -iv "fileExecuteSN" 1
+ -iv "fileExecuteSN" 0
  -iv "fileIgnoreVersion" 1
  -sv "fileOpenRefLoadSetting" "default";
 optionVar
